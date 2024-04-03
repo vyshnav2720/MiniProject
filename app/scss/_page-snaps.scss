@@ -1,0 +1,18 @@
+.master-container {
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+
+    section {
+        &:not(.hero){
+            padding-top: 4.5rem;
+        }
+        
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+
+   
+}
+

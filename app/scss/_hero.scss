@@ -1,0 +1,291 @@
+.hero {
+    position: relative;
+
+    &__heading-text1,
+    &__heading-text2 {
+        position: relative;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        font-size: $font-exlg;
+        font-family: "Gabarito", sans-serif;
+        font-weight: 900;
+        letter-spacing: 0.2rem;
+        white-space: nowrap;
+        text-align: center;
+        color: $Dingley;
+        overflow: hidden;
+        width: 100%; //needed for animation
+        animation:
+            typing 2.5s,
+            cursor 4s step-end infinite alternate;
+
+        @keyframes cursor {
+            50% {
+                border-color: transparent
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+        }
+
+        &.hero__heading-text1 {
+            top: -12rem;
+        }
+
+
+        &.hero__heading-text2 {
+            top: -15rem;
+        }
+
+
+        @include breakpoint-up(large) {
+            position: absolute;
+            text-align: left;
+            top: 10rem;
+            left: 2.5rem;
+            font-size: 7rem;
+            animation: none;
+
+            &.hero__heading-text2 {
+                top: 20rem;
+            }
+
+        }
+
+        @media (max-width:22.5rem) {
+            font-size: 1.5rem;
+            &.hero__heading-text1 {
+                top: -8.5rem;
+            }
+    
+    
+            &.hero__heading-text2 {
+                top: -10rem;
+            }
+        }
+
+    }
+    &__rotating-text {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        border-radius: 50%;
+        animation-name: rotate-circle;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        @media (max-width:22.5rem) {
+            width: 70%;
+        }
+
+        @keyframes rotate-circle {
+            to {
+              transform: rotate(1turn);
+            }
+          }
+
+    }
+
+
+
+    &__leaf {
+        position: absolute;
+        width: 38%;
+        top: 35.5%;
+        left: 33%;
+
+        @media (max-width:22.5rem) {
+            width: 5.5rem;
+            top: 38%;
+            left: 39%;
+        }
+
+        @include breakpoint-up(large) {
+            width: 5rem;
+        }
+    }
+
+
+
+    &__tagline-container {
+        position: relative;
+        min-width: -moz-fit-content;
+        min-width: fit-content;
+        bottom: 3rem;
+
+        .tagline-text {
+            position: relative;
+            font-family: "Gabarito", sans-serif;
+            font-weight: bolder;
+            font-size: $font-med;
+            color: $PineGlade;
+
+            @media (max-width:22.5rem) {
+                font-size: $font-sm;
+            }
+        }
+
+        .tagline-doodle1 {
+            position: relative;
+            margin-right: 0.5rem;
+            width: 12%;
+
+        }
+
+        .tagline-doodle2 {
+            position: relative;
+            margin-left: 0.5rem;
+            width: 12%;
+        }
+
+        @media (max-width:22.5rem) {
+            bottom: -5rem;
+        }
+    }
+
+    #mouse-scroll {
+        display: block;
+    }
+
+    #mouse-scroll {
+        position: absolute;
+        left: 50%;
+        top: 82%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    #mouse-scroll span {
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        transform: rotate(45deg);
+        border-right: 3px solid $Dingley;
+        border-bottom: 3px solid $Dingley;
+        border-radius: 20%;
+        margin-left: 0.35rem;
+        margin-top: 0.1rem;
+
+        &:not(first-child) {
+            margin-top: 0.3rem;
+        }
+    }
+
+    #mouse-scroll .mouse {
+        height: 2rem;
+        width: 1.3rem;
+        border-radius: 1rem;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        border: 3px solid $Dingley;
+        top: 20rem;
+    }
+
+    #mouse-scroll .down-arrow-1,
+    #mouse-scroll .down-arrow-2,
+    #mouse-scroll .down-arrow-3 {
+
+        -webkit-animation: mouse-scroll 1s infinite;
+        -moz-animation: mouse-scroll 1s infinite;
+        animation: mouse-scroll 1s infinite;
+    }
+
+    #mouse-croll .down-arrow-1 {
+        -webkit-animation-delay: .1s;
+        -moz-animation-delay: .1s;
+        animation-delay: .1s;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
+    #mouse-scroll .down-arrow-2 {
+        -webkit-animation-delay: .2s;
+        -moz-animation-delay: .2s;
+        animation-delay: .2s;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
+    #mouse-scroll .down-arrow-3 {
+        -webkit-animation-delay: .3s;
+        -moz-animation-dekay: .3s;
+        animation-delay: .3s;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
+    #mouse-scroll .mouse-in {
+        height: 6px;
+        width: 3px;
+        display: block;
+        margin: 5px auto;
+        border-radius: 0.1rem;
+        background: $Dingley;
+        position: relative;
+    }
+
+    #mouse-scroll .mouse-in {
+        -webkit-animation: animated-mouse 1.2s ease infinite;
+        moz-animation: mouse-animated 1.2s ease infinite;
+    }
+
+    @-webkit-keyframes animated-mouse {
+        0% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+            -webkit-transform: translateY(6px);
+            -ms-transform: translateY(6px);
+            transform: translateY(6px);
+        }
+    }
+
+    @-webkit-keyframes mouse-scroll {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: .5;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes mouse-scroll {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+
+
+
+
+}

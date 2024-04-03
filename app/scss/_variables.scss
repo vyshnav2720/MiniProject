@@ -1,0 +1,23 @@
+//Colors
+
+$PineGlade: #c5cd9d;
+$CodGray: #161515;
+$Beige: #F0EDCD;
+$Dingley: #698950;
+
+//Font Sizes
+
+$font-sm: 0.875rem;  //14px   
+$font-med: 1.125rem; //18px
+$font-lg: 1.5rem;  //24px
+$font-exlg: 2.25rem; //36px
+
+//Fonts
+
+@font-face {
+    font-family: Buffy;
+    src: url(/fonts/buffy-light.otf);
+
+    font-family: Nohemi;
+    src: url(/fonts/Nohemi-Black.ttf);
+}

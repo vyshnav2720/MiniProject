@@ -1,0 +1,107 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: $PineGlade;
+    z-index: 100;
+
+    &.open {
+
+        .header__ham-toggle {
+            >span:first-child {
+                transform: rotate(45deg);
+            }
+
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+
+            >span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+
+    }
+
+
+    .overlay {
+        z-index: 100;
+        opacity: 0;
+        position: fixed;
+        top: 5rem;
+        right: 0rem;
+        bottom: 0rem;
+        left: 0rem;
+        background-color: $PineGlade;
+        background-image: linear-gradient($PineGlade, transparent);
+
+    }
+
+    &__logo {
+        img {
+            width: 6rem;
+        }
+    }
+
+    nav {
+        position: relative;
+        padding: 1.0625rem;
+        z-index: 100;
+
+    }
+
+    &__ham-toggle {
+        >span {
+            position: relative;
+            display: block;
+            width: 1.5rem;
+            height: 0.2rem;
+            background-color: $CodGray;
+            transition: all 300ms ease-in-out;
+            transform-origin: 0.2rem;
+            z-index: 100;
+
+            &:not(:last-child) {
+                margin-bottom: 3px;
+            }
+
+        }
+
+
+    }
+
+    &__links {
+
+        a {
+            font-size: $font-med;
+            color: $CodGray;
+            font-weight: 600;
+
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+        }
+
+    }
+
+    &__menu {
+        z-index: 100;
+        position: absolute;
+        background-color: $CodGray;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+        width: 100%;
+
+        a {
+            color: $PineGlade;
+            padding: $font-lg;
+            font-weight: bolder;
+        }
+    }
+
+    &__spans {
+        padding-right: 6rem;
+    }
+
+
+}
