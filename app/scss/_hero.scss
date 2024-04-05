@@ -3,7 +3,7 @@
 
     &__heading-text1,
     &__heading-text2 {
-        position: relative;
+        position: absolute;
         max-width: -moz-fit-content;
         max-width: fit-content;
         font-size: $font-exlg;
@@ -33,12 +33,12 @@
         }
 
         &.hero__heading-text1 {
-            top: -12rem;
+            top: 6rem;
         }
 
 
         &.hero__heading-text2 {
-            top: -15rem;
+            top: 9.5rem;
         }
 
 
@@ -116,7 +116,7 @@
         position: relative;
         min-width: -moz-fit-content;
         min-width: fit-content;
-        bottom: -6.5rem;
+        top: 13rem;
 
         .tagline-text {
             position: relative;

@@ -1,3 +1,46 @@
 .snap1 {
-   
+   .info-wrapper {
+    position: relative;
+    top: 0.5%;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: none;
+    height: 80vh;
+    background-color: $Beige;
+
+
+   }
+   .info-wrapper::-webkit-scrollbar{
+    display: none;
+    width: 0%;
+   }
+   .info-item{
+    scroll-snap-align: start;
+    text-align: center;
+    min-width: 100%;
+    min-height: 100%;
+    margin-left: 2rem;
+    color: $CodGray;
+    h3 {
+        font-size: $font-lg;
+        font-weight: 500;
+        font-family: "Gabarito", sans-serif;
+    }
+
+
+    &:nth-child(1){
+
+    }
+
+    &:nth-child(2){
+        
+    }
+
+    &:nth-child(3){
+        
+    }
+    &:nth-child(4){
+        
+    }
+   }
 }

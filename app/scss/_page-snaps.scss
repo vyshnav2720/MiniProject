@@ -1,18 +1,31 @@
-.master-container {
+.verticalsnap {
     position: relative;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    overflow-x: none;
     height: 100vh;
 
     section {
         &:not(.hero){
-            padding-top: 4.5rem;
+            padding-top: 5.5rem;
         }
-        
         height: 100vh;
         scroll-snap-align: start;
     }
-
    
 }
 
+.horizontalsnap {
+    position: relative;
+    scroll-snap-type: x mandatory; /* Change to horizontal scroll snapping */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    //overflow-y: none; /* Disable vertical scrolling */
+    height: 100vh;
+
+    section {
+        display: flex;
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+   
+}
