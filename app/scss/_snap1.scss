@@ -11,6 +11,10 @@
     border-top: 0.1rem dashed $CodGray;
     border-bottom: 0.1rem dashed $CodGray;
 
+    @include breakpoint-up(large){
+        height: 60vh;
+    }
+
 
    }
    .info-wrapper::-webkit-scrollbar{
@@ -26,14 +30,16 @@
     margin-left: 2rem;
     color: $CodGray;
     border-radius: 2rem;
-    //border: 0.1rem dashed $CodGray;
     h3 {
         position: relative;
         font-size: 1.5rem;
         font-weight: 500;
         font-family: "Gabarito", sans-serif;
         white-space: nowrap;
-        //margin-top: 1rem;
+        @include breakpoint-up(large){
+            font-size: 5rem;
+            margin-left: 2rem;
+        }
     }
     p {
         font-size: $font-lg;
@@ -41,7 +47,13 @@
         text-align: left;
         margin: 1rem;
         //font-family: "Gabarito", sans-serif;
-        font-family: Buffy;
+        //font-family: Buffy;
+
+        @include breakpoint-up(large){
+            font-size: 3rem;
+            font-weight: 500;
+            margin-left: 10rem;
+        }
     }
 
     .info1-heading-container{
@@ -51,10 +63,14 @@
             width: 3rem;
             background-color:$CodGray;
             border-radius: 3rem;
-            padding: 0.2rem;
-            //margin-top: 1rem;
+            padding: 0.1rem;
+            margin-top: 0.7rem;
             margin-left: 0.5rem;
             margin-right: 0.5rem;
+            @include breakpoint-up(large){
+                width: 6rem;
+                border-radius: 6rem;
+            }
         }
     }
 
@@ -76,4 +92,58 @@
         
     }
    }
+.cta-container {
+    //background-color: aquamarine;
+    position: relative;
+    top: 10rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    @include breakpoint-up(large){
+        flex-direction: row;
+    }
+
+    .snap1-cta1{
+        position: relative;
+        
+        padding: 1rem;
+    }
+
+    .snap1-cta2{
+        position: relative;
+        padding: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $CodGray;
+        cursor: pointer;
+        border: 3px solid;
+        padding: 0.25em 0.5em;
+        box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+        position: relative;
+        -webkit-user-select: none;
+        user-select: none;
+        touch-action: manipulation;
+      }
+      
+      button:active {
+        box-shadow: 0px 0px 0px 0px;
+        top: 0.313rem;
+        left: 0.313rem;
+      }
+      
+      @media (min-width: 768px) {
+        button {
+          padding: 0.25em 0.75em;
+        }
+      }
+        
+}
+
+
+
+
 }
