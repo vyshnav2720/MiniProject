@@ -221,14 +221,14 @@ a:hover {
   .hero__heading-text1, .hero__heading-text2 {
     position: absolute;
     left: 2.5rem;
-    font-size: 8rem;
+    font-size: 9rem;
     animation: none;
   }
   .hero__heading-text1.hero__heading-text1, .hero__heading-text2.hero__heading-text1 {
-    top: 15rem;
+    top: 20rem;
   }
   .hero__heading-text1.hero__heading-text2, .hero__heading-text2.hero__heading-text2 {
-    top: 25rem;
+    top: 30rem;
   }
 }
 .hero__rotating-text {
@@ -250,7 +250,7 @@ a:hover {
   .hero__rotating-text {
     top: 25%;
     width: 30%;
-    left: 70%;
+    left: 68%;
   }
 }
 .hero__leaf {
@@ -263,7 +263,7 @@ a:hover {
   .hero__leaf {
     width: 11.5%;
     top: 38%;
-    left: 80%;
+    left: 78%;
   }
 }
 .hero__tagline-container {
@@ -274,7 +274,7 @@ a:hover {
 }
 @media (min-width: 64em) {
   .hero__tagline-container {
-    top: -13rem;
+    top: -15rem;
   }
 }
 .hero .tagline-text {
@@ -414,130 +414,136 @@ a:hover {
   scroll-snap-align: start;
 }
 
-.diag-container .upload-container {
+.container {
   position: relative;
-  margin-top: 6rem;
-  width: 22rem;
-  text-align: center;
-  border: 0.2rem dashed #161515;
-  border-radius: 3rem;
-}
-.diag-container .upload-container .img-area {
-  position: relative;
+  width: 30rem;
+  background: #c5cd9d;
   padding: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  background-color: Co;
   border-radius: 2rem;
+  left: 10rem;
+  top: 15rem;
+}
+
+.img-area {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background: #F0EDCD;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-area .icon {
+  font-size: 9rem;
+}
+
+.img-area h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.img-area p {
+  color: #999;
+}
+
+.img-area p span {
+  font-weight: 600;
+}
+
+.img-area img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   z-index: 100;
-  background-color: #c5cd9d;
-}
-.diag-container .upload-container .img-area .upload-icon {
-  width: 7rem;
-}
-.diag-container .upload-container .img-area h3 {
-  font-size: 1.5rem;
-}
-.diag-container .upload-container .img-area p {
-  display: relative;
-  font-size: 1.125rem;
-  white-space: nowrap;
-}
-.diag-container .upload-container .select-img {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  border-radius: 2rem;
-  background-color: #161515;
-  color: #c5cd9d;
 }
 
-.snap1 .info-wrapper {
-  position: relative;
-  top: 0.5%;
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-  overflow-y: none;
-  height: 40vh;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  border-top: 0.1rem dashed #161515;
-  border-bottom: 0.1rem dashed #161515;
+.img-area::before {
+  content: attr(data-img);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 200;
 }
-@media (min-width: 64em) {
-  .snap1 .info-wrapper {
-    height: 60vh;
-  }
+
+.img-area.active:hover::before {
+  opacity: 1;
 }
-.snap1 .info-wrapper::-webkit-scrollbar {
-  display: none;
-  width: 0%;
+
+.select-image {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 15px;
+  background: #161515;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.select-image:hover {
+  background: #3a3939;
+}
+
 .snap1 .info-item {
   position: relative;
   scroll-snap-align: start;
   text-align: center;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   margin-left: 2rem;
   color: #161515;
-  border-radius: 2rem;
+  border-radius: 1rem;
+  border: 2px solid #161515;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 .snap1 .info-item h3 {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
   font-family: "Gabarito", sans-serif;
   white-space: nowrap;
-}
-@media (min-width: 64em) {
-  .snap1 .info-item h3 {
-    font-size: 5rem;
-    margin-left: 2rem;
-  }
+  text-align: left;
 }
 .snap1 .info-item p {
   font-size: 1.5rem;
   font-weight: 300;
   text-align: left;
   margin: 1rem;
-}
-@media (min-width: 64em) {
-  .snap1 .info-item p {
-    font-size: 3rem;
-    font-weight: 500;
-    margin-left: 10rem;
-  }
-}
-.snap1 .info-item .info1-heading-container {
-  position: relative;
-  margin-top: 1.5rem;
-}
-.snap1 .info-item .info1-heading-container img {
-  width: 3rem;
-  background-color: #161515;
-  border-radius: 3rem;
-  padding: 0.1rem;
-  margin-top: 0.7rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-@media (min-width: 64em) {
-  .snap1 .info-item .info1-heading-container img {
-    width: 6rem;
-    border-radius: 6rem;
-  }
-}
-.snap1 .info-item:nth-child(2) h3 {
-  white-space: wrap;
+  font-family: "Gabarito", sans-serif;
 }
 .snap1 .cta-container {
   position: relative;
-  top: 10rem;
+  top: 2rem;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -549,10 +555,12 @@ a:hover {
 .snap1 .cta-container .snap1-cta1 {
   position: relative;
   padding: 1rem;
+  left: 45rem;
 }
 .snap1 .cta-container .snap1-cta2 {
   position: relative;
   padding: 1rem;
+  right: -50rem;
 }
 .snap1 .cta-container button {
   font-size: 1rem;
@@ -570,10 +578,15 @@ a:hover {
        user-select: none;
   touch-action: manipulation;
 }
-.snap1 .cta-container button:active {
+.snap1 .cta-container .snap1-cta2:active {
   box-shadow: 0px 0px 0px 0px;
   top: 0.313rem;
-  left: 0.313rem;
+  right: -50rem;
+}
+.snap1 .cta-container .snap1-cta1:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 0.313rem;
+  left: 45rem;
 }
 @media (min-width: 768px) {
   .snap1 .cta-container button {

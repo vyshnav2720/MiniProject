@@ -1,101 +1,40 @@
 .snap1 {
-   .info-wrapper {
-    position: relative;
-    top: 0.5%;
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    overflow-y: none;
-    height: 40vh;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    border-top: 0.1rem dashed $CodGray;
-    border-bottom: 0.1rem dashed $CodGray;
-
-    @include breakpoint-up(large){
-        height: 60vh;
-    }
-
-
-   }
-   .info-wrapper::-webkit-scrollbar{
-    display: none;
-    width: 0%;
-   }
    .info-item{
     position: relative;
     scroll-snap-align: start;
     text-align: center;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
     margin-left: 2rem;
     color: $CodGray;
-    border-radius: 2rem;
+    border-radius: 1rem;
+    border: 2px solid $CodGray;
+    padding: 1rem;
+    margin-top: 1rem;
     h3 {
         position: relative;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 500;
         font-family: "Gabarito", sans-serif;
         white-space: nowrap;
-        @include breakpoint-up(large){
-            font-size: 5rem;
-            margin-left: 2rem;
-        }
+        text-align: left;
     }
     p {
-        font-size: $font-lg;
+        font-size: 1.5rem;
         font-weight: 300;
         text-align: left;
         margin: 1rem;
-        //font-family: "Gabarito", sans-serif;
-        //font-family: Buffy;
-
-        @include breakpoint-up(large){
-            font-size: 3rem;
-            font-weight: 500;
-            margin-left: 10rem;
-        }
+        font-family: "Gabarito", sans-serif;
     }
 
-    .info1-heading-container{
-        position: relative;
-        margin-top: 1.5rem;
-        img {
-            width: 3rem;
-            background-color:$CodGray;
-            border-radius: 3rem;
-            padding: 0.1rem;
-            margin-top: 0.7rem;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-            @include breakpoint-up(large){
-                width: 6rem;
-                border-radius: 6rem;
-            }
-        }
-    }
-
-    &:nth-child(1){
-        
-    }
-
-    &:nth-child(2){
-        h3{
-            white-space: wrap;
-        }
-
-    }
-
-    &:nth-child(3){
-        
-    }
-    &:nth-child(4){
-        
-    }
    }
+
 .cta-container {
     //background-color: aquamarine;
     position: relative;
-    top: 10rem;
+    top: 2rem;
     width: -moz-fit-content;
     width: fit-content;
     @include breakpoint-up(large){
@@ -104,13 +43,16 @@
 
     .snap1-cta1{
         position: relative;
-        
         padding: 1rem;
+        left: 45rem;
+
     }
 
     .snap1-cta2{
         position: relative;
         padding: 1rem;
+        right: -50rem;
+
     }
 
     button {
@@ -129,10 +71,17 @@
         touch-action: manipulation;
       }
       
-      button:active {
+      .snap1-cta2:active{
         box-shadow: 0px 0px 0px 0px;
         top: 0.313rem;
-        left: 0.313rem;
+        right: -50rem;
+      }
+
+      .snap1-cta1:active {
+        box-shadow: 0px 0px 0px 0px;
+        top: 0.313rem;
+        left: 45rem;
+
       }
       
       @media (min-width: 768px) {

@@ -45,14 +45,14 @@
         @include breakpoint-up(large) {
             position: absolute;
             left:2.5rem;    
-            font-size: 8rem;
+            font-size: 9rem;
             animation: none;
 
             &.hero__heading-text1 {
-                top: 15rem;
+                top: 20rem;
             }
             &.hero__heading-text2 {
-                top: 25rem;
+                top: 30rem;
             }
 
         }
@@ -79,7 +79,7 @@
         @include breakpoint-up(large){
             top: 25%;
             width: 30%;
-            left: 70%;
+            left: 68%;
         }  
     }
 
@@ -94,7 +94,7 @@
         @include breakpoint-up(large) {
             width: 11.5%;
             top: 38%;
-            left: 80%;
+            left: 78%;
         }
     }
 
@@ -107,7 +107,7 @@
         top: 13rem;
 
         @include breakpoint-up(large){
-            top: -13rem;
+            top: -15rem;
         }
     }
 

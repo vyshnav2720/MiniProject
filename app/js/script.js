@@ -1,48 +1,27 @@
+const selectImage = document.querySelector('.select-image');
+const inputFile = document.querySelector('#file');
+const imgArea = document.querySelector('.img-area');
 
-const mastersection = document.querySelectorAll('.master-container');
-const sections = document.querySelectorAll('.master-container section');
-const hsnap1 = document.querySelectorAll('.master-container .hsnap1');
-const vsnap1 = document.querySelectorAll('.master-container .vsnap1');
-const vsnap2 = document.querySelectorAll('.master-container .vsnap2');
-const vsnap3 = document.querySelectorAll('.master-container .vsnap3');
-const hsnap2 = document.querySelectorAll('.master-container .hsnap2');
+selectImage.addEventListener('click', function () {
+	inputFile.click();
+})
 
-const options = {
-  threshold: 0.5 // Defines at what percentage of the target's visibility the observer's callback should be executed
-};
-
-
-function Snapper(className){
-    if(className == "vsnap1"){
-    }
-    
-}
-
-
-const callback = (entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active-section');
-      Snapper(entry.target.classList[0]);
-
-      
-      sections.forEach(section => {
-        if (section !== entry.target) {
-          section.classList.remove('active-section');
-        }
-      });
-    }
-  });
-};
-
-const observer = new IntersectionObserver(callback, options);
-
-sections.forEach(section => {
-  observer.observe(section);
-});
-
-
-
-
-
-
+inputFile.addEventListener('change', function () {
+	const image = this.files[0]
+	if(image.size < 2000000) {
+		const reader = new FileReader();
+		reader.onload = ()=> {
+			const allImg = imgArea.querySelectorAll('img');
+			allImg.forEach(item=> item.remove());
+			const imgUrl = reader.result;
+			const img = document.createElement('img');
+			img.src = imgUrl;
+			imgArea.appendChild(img);
+			imgArea.classList.add('active');
+			imgArea.dataset.img = image.name;
+		}
+		reader.readAsDataURL(image);
+	} else {
+		alert("Image size more than 2MB");
+	}
+})
