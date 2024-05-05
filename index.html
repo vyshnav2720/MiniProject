@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="app/scss/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app/scss/style.css') }}" >
     <title>LeafLens.</title>
 </head>
 
@@ -23,7 +23,7 @@
 
         <nav class="flex flex-jc-sb flex-ai-c">
             <a href="index.html" class="header__logo">
-                <img src="/images/LeafLensLogo.svg" alt="">
+                <img src="{{url_for('static', filename='/images/LeafLensLogo.svg')}}" alt="">
             </a>
 
             <a id="btn_ham" class="header__ham-toggle hide-for-desktop">
@@ -60,12 +60,12 @@
                 Leaf Wellness.</h1>
             <img class= "hero__rotating-text" src="/images/roatating-text.svg" alt="">
             <div class="hero__image">
-                <img class=hero__leaf src="/images/HeroLeafImage.png" alt="">
+                <img class=hero__leaf src="{{url_for('static',filename='/images/HeroLeafImage.png')}}" alt="">
             </div>
             <div class="hero__tagline-container flex flex-dir-r flex-ai-c flex-jc-c">
-                <img class="tagline-doodle1" src="/images/hero_doodle1.png" alt="">
+                <img class=hero__leaf src="{{url_for('static',filename='/images/hero_doodle1.png')}}" alt="">
                 <p class="tagline-text">Your Plant Health Companion</p>
-                <img class="tagline-doodle2" src="/images/hero_doodle2.png" alt="">
+                <img class=hero__leaf src="{{url_for('static',filename='/images/hero_doodle2.png')}}" alt="">
             </div>
 
             <div id="mouse-scroll">
@@ -120,8 +120,8 @@
 
 
 
-        <script defer src="app/js/head_menu_func.js"> </script>
-        <script defer src="app/js/script.js"> </script>
+        <script defer src="{{url_for('static',filename='app/js/head_menu_func.js')}}"> </script>
+        <script defer src="{{url_for('static',filename='app/js/script.js')}}"> </script>
         
 </body>
 

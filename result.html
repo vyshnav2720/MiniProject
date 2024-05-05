@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="app/scss/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app/scss/style.css') }}" >  
     <title>Prediction</title>
 </head>
 <body>
@@ -48,11 +48,12 @@
 
     </header>
     
-    
+    <h1>Prediction Result</h1>
+    <p>Predicted Disease: {{ prediction }}</p>
 
 
 
-    <script defer src="app/js/head_menu_func.js"> </script>
-    <script defer src="app/js/script.js"> </script>
+    <script defer src="{{url_for('static',filename='app/js/head_menu_func.js')}}"> </script>
+        <script defer src="{{url_for('static',filename='app/js/script.js')}}"> </script>
 </body>
 </html>

@@ -19,7 +19,7 @@ body {
     font-family: "M PLUS Rounded 1c", sans-serif;
     line-height: 1.3;
     font-size: $font-med;
-    background-image: url(/images/noise.png);
+    background-image: url("{{url_for('static',filename='/images/noise.png')}}");
     background-color: $Beige;
 
 }
