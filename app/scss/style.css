@@ -494,21 +494,54 @@ a:hover {
 }
 
 .select-image {
-  display: block;
-  width: 100%;
-  padding: 16px 0;
-  border-radius: 15px;
-  background: #161515;
-  color: #fff;
-  font-weight: 500;
-  font-size: 16px;
-  border: none;
+  position: relative;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #161515;
   cursor: pointer;
-  transition: all 0.3s ease;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  touch-action: manipulation;
+  left: 6.6rem;
 }
 
-.select-image:hover {
-  background: #3a3939;
+.select-image:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 0.313rem;
+  left: 6.8rem;
+}
+
+.upload-button {
+  position: relative;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #161515;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 1.5rem;
+  left: 8.8rem;
+}
+
+.upload-button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 0.313rem;
+  left: 8.9rem;
 }
 
 .snap1 .info-item {
