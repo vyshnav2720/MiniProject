@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='app/scss/style.css') }}" >
+    <link rel="stylesheet" href="app/scss/style.css" >
     <title>WHTML.</title>
 </head>
 
@@ -22,7 +22,7 @@
 
         <nav class="flex flex-jc-sb flex-ai-c">
             <a href="index.html" class="header__logo">
-                <img src="{{url_for('static',filename='/images/LeafLensLogo.svg')}}" alt="">
+                <img src="/images/LeafLensLogo.svg" alt="">
             </a>
 
             <a id="btn_ham" class="header__ham-toggle hide-for-desktop">
@@ -75,8 +75,8 @@
 
 
 
-    <script defer src="{{url_for('static',filename='app/js/head_menu_func.js')}}"> </script>
-        <script defer src="{{url_for('static',filename='app/js/script.js')}}"> </script>
+    <script defer src="app/js/head_menu_func.js"> </script>
+        <script defer src="app/js/script.js"> </script>
 
 </body>
 
